@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #222;
+  font-family: "Open Sans", sans-serif;
+  font-size: 120%;
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
+}
+.card {
+  background: #000000d0;
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  margin: 0.5em;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  height: 3.5em;
+  width: 3.5em;
+  background: #aca9a92b;
+  color: white;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+button:hover {
+  background: #aca9a96b;
+}
+.temperature {
+  margin: 0;
+}
+.city{
+  font-size: 1.5rem;
+  margin-top: 1.5em;
+}
+.temperature{
+  font-size: 4rem;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #aca9a92b;
+  color: white;
+  font-family: inherit;
+  font-size: 120%;
+  width: calc(100% - 2em);
+}
+input.search-bar:focus {
+  background: #aca9a94b;
+}
+.weather{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.description{
+  text-transform: capitalize;
+}
+.icon-description{
+  display: flex;
+  align-items: center;
+}
+.humidity{
+  padding-bottom: 0.5em;
+}
+.weather.loading{
+  visibility: hidden;
+  max-height: 2em;
+  position: relative;
+}
+.weather.loading::after{
+  visibility: visible;
+  content: "Loading...";
+  color: white;
+  position: absolute;
+  
+}
